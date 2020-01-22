@@ -1,0 +1,58 @@
+{
+  "products":[
+    {
+      "id": 1001,
+      "title": "Nike season 2020",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes",
+      "price": 10000,
+      "image": "static/images/sneakers1.jpeg",
+      "availableInventory": 10,
+      "rating": 1
+    },
+    {
+      "id": 1002,
+      "title": "Skechers season 2019",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes",
+      "price": 5000,
+      "image": "static/images/sneakers2.jpeg",
+      "availableInventory": 7,
+      "rating": 1
+    },
+    {
+      "id": 1003,
+      "title": "Skechers season 2020",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+      "price": 5500,
+      "image": "static/images/sneakers3.jpeg",
+      "availableInventory": 99,
+      "rating": 4
+    },
+    {
+      "id": 1004,
+      "title": "T-shirt Puma",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+      "price": 2100,
+      "image": "static/images/tshirt1.jpeg",
+      "availableInventory": 11,
+      "rating": 5
+    },
+    {
+      "id": 1005,
+      "title": "T-shirt Motivation",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+      "price": 1999,
+      "image": "static/images/tshirt2.jpeg",
+      "availableInventory": 25,
+      "rating": 1
+    },
+    {
+      "id": 1006,
+      "title": "T-shirt IcePeak",
+      "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.",
+      "price": 2999,
+      "image": "static/images/tshirt3.jpeg",
+      "availableInventory": 25,
+      "rating": 1
+    }
+  ]
+}
