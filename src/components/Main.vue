@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="catalog" >
   <my-header :cartItemCount="cartItemCount"></my-header>
   <main>
   <div v-for="product in sortedProducts">
@@ -50,6 +50,7 @@
 <script>
 import MyHeader from './Header.vue';
 import {mapGetters} from 'vuex';
+
 export default {
   name: 'imain',
   data () {
@@ -88,7 +89,7 @@ export default {
     },
     sortedProducts() {
       if(this.products.length > 0) {
-        let productsArray = this.products.slice(0);
+        let productsArray = this.products.slice(0).filter(product => product.category == "shoes");
         function compare(a, b) {
           if(a.title.toLowerCase() < b.title.toLowerCase())
           return -1;
@@ -124,6 +125,7 @@ export default {
   }
 }
 </script>
+
 <style scoped>
 .bounce-enter-active {
   animation: shake 0.72s cubic-bezier(.37,.07,.19,.97) both;
@@ -150,4 +152,8 @@ export default {
     transform: translate3d(4px, 0, 0);
   }
 }
+
+  #catalog {
+    margin-top: 100px;
+  }
 </style>

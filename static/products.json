@@ -7,7 +7,8 @@
       "price": 10000,
       "image": "static/images/sneakers1.jpeg",
       "availableInventory": 10,
-      "rating": 1
+      "rating": 5,
+      "category": "shoes"
     },
     {
       "id": 1002,
@@ -16,7 +17,8 @@
       "price": 5000,
       "image": "static/images/sneakers2.jpeg",
       "availableInventory": 7,
-      "rating": 1
+      "rating": 4,
+      "category": "shoes"
     },
     {
       "id": 1003,
@@ -25,7 +27,8 @@
       "price": 5500,
       "image": "static/images/sneakers3.jpeg",
       "availableInventory": 99,
-      "rating": 4
+      "rating": 3,
+      "category": "shoes"
     },
     {
       "id": 1004,
@@ -34,7 +37,8 @@
       "price": 2100,
       "image": "static/images/tshirt1.jpeg",
       "availableInventory": 11,
-      "rating": 5
+      "rating": 5,
+      "category": "tshirt"
     },
     {
       "id": 1005,
@@ -43,7 +47,8 @@
       "price": 1999,
       "image": "static/images/tshirt2.jpeg",
       "availableInventory": 25,
-      "rating": 1
+      "rating": 3,
+      "category": "tshirt"
     },
     {
       "id": 1006,
@@ -52,7 +57,8 @@
       "price": 2999,
       "image": "static/images/tshirt3.jpeg",
       "availableInventory": 25,
-      "rating": 1
+      "rating": 4,
+      "category": "tshirt"
     }
   ]
 }
