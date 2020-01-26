@@ -19,6 +19,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "save": "^2.4.0",
     "vue": "^2.4.2",
+    "vue-browser-geolocation": "^1.8.0",
     "vue-fixed-header": "^3.2.13",
     "vue-router": "^2.7.0",
     "vue-sidebar-menu": "^4.4.7",

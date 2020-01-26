@@ -58,7 +58,7 @@
     position: fixed;
     left: 50px;
     top: 0;
-    width: calc(100% - 50px);
+    width: 1142px;
     background-color: blue;
     z-index: 1000;
   }

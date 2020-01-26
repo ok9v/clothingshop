@@ -3,20 +3,25 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
           crossorigin="anonymous">
-    <div class="shopmain">
-      <div class="container">
-        <router-view/>
-      </div>
-      <sidebar-menu
-        :menu="menu"
-        :collapsed="collapsed"
-        :disableHover="disableHover"
-        :theme="selectedTheme"
-        :show-one-child="true"
-        @toggle-collapse="onToggleCollapse"
-        @item-click="onItemClick"
-      />
+    <sidebar-menu
+      :menu="menu"
+      :collapsed="collapsed"
+      :disableHover="disableHover"
+      :theme="selectedTheme"
+      :show-one-child="true"
+      @toggle-collapse="onToggleCollapse"
+      @item-click="onItemClick"
+    />
+    <div id="myheader" :class="[{'collapsed' : collapsed}]">
       <my-header></my-header>
+    </div>
+    <div class="shopmain">
+      <div id="mycatalog">
+            <router-view/>
+          </div>
+        <div  id="myweather">
+      <my-weather></my-weather>
+        </div>
     </div>
   </div>
 </template>
@@ -25,6 +30,7 @@
 
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
 import MyHeader from './components/Header.vue';
+import MyWeather from './components/Weather.vue';
 
 
 const separator = {
@@ -33,7 +39,7 @@ const separator = {
 
 export default {
   name: 'app',
-  components: { MyHeader },
+  components: { MyHeader, MyWeather },
   data () {
     return {
       menu: [
@@ -97,9 +103,9 @@ export default {
     },
     onItemClick (event, item) {
       console.log('onItemClick')
-    }
-  },
+    },
 
+  },
 }
 </script>
 
@@ -137,13 +143,29 @@ body {
   padding-left: 50px;
 }
 
-.shopmain {
-  padding: 10px;
+#myheader .navbar.vue-fixed-header--isFixed {
+  left: 350px;
 }
 
-.container {
-  min-width: 900px;
+#myheader.collapsed .navbar.vue-fixed-header--isFixed {
+  left: 50px;
+}
+
+.shopmain {
+  width: 1150px;
+  padding: 10px;
+  display: flex;
+}
+
+#mycatalog {
+  flex: 1;
   height: 600px;
+  width: 800px;
+}
+
+#myweather {
+  margin-top: 76px;
+  width: 300px;
 }
 
 pre {
