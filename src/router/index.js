@@ -15,6 +15,12 @@ export default new Router({
   routes: [
     {
       path: '/',
+      name: 'Form',
+      component: Form,
+      props: true,
+    },
+    {
+      path: '/form',
       name: 'iForm',
       component: Form,
       props: true,

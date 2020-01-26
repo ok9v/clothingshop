@@ -16,6 +16,7 @@
         @toggle-collapse="onToggleCollapse"
         @item-click="onItemClick"
       />
+      <my-header></my-header>
     </div>
   </div>
 </template>
@@ -23,6 +24,8 @@
 <script>
 
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'
+import MyHeader from './components/Header.vue';
+
 
 const separator = {
   template: `<hr style="border-color: rgba(0, 0, 0, 0.1); margin: 20px;">`
@@ -30,6 +33,7 @@ const separator = {
 
 export default {
   name: 'app',
+  components: { MyHeader },
   data () {
     return {
       menu: [
@@ -94,7 +98,8 @@ export default {
     onItemClick (event, item) {
       console.log('onItemClick')
     }
-  }
+  },
+
 }
 </script>
 

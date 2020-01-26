@@ -1,6 +1,5 @@
 <template>
   <div id="catalog" >
-    <my-header :cartItemCount="cartItemCount"></my-header>
     <main>
       <div v-for="product in sortedProducts">
         <div class="row">
@@ -48,7 +47,6 @@
   </div>
 </template>
 <script>
-  import MyHeader from './Header.vue';
   import {mapGetters} from 'vuex';
 
   export default {
@@ -58,7 +56,6 @@
         cart: []
       }
     },
-    components: { MyHeader },
     methods: {
       checkRating(n, myProduct) {
         return myProduct.rating - n >= 0;

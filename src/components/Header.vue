@@ -8,7 +8,7 @@
       </div>
       <div class="nav navbar-nav navbar-right cart">
         <router-link active-class="active" tag="button" class="btn btn-default btn-lg" :to="{name: 'Form'}">
-          <span class="glyphicon glyphicon-shopping-cart">{{ cartItemCount}}</span> Checkout
+          <span class="glyphicon glyphicon-shopping-cart">{{ cart.length}}</span> Checkout
         </router-link>
       </div>
     </div>
@@ -17,6 +17,7 @@
 
 <script>
   import FixedHeader from 'vue-fixed-header'
+  import {mapGetters} from "vuex";
 
   export default {
     name: 'header',
@@ -28,13 +29,17 @@
         sitename: "Sport Clothes",
       }
     },
-    props: ['cartItemCount'],
     methods: {
       showCheckout() {
         this.$router.push({name: 'Form'});
       }
 
-    }
+    },
+    computed: {
+      ...mapGetters([
+        'cart'
+      ])
+    },
   }
 </script>
 

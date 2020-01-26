@@ -1,10 +1,9 @@
 <template>
-  <div>
-  <my-header :cartItemCount="cartItemCount"></my-header>
+  <div id="sendform">
     <div class="row">
       <div class="col-md-10 col-md-offset-1">
         <div class="panel panel-info">
-          <div class="panel-heading">Pet Depot Checkout</div>
+          <div class="panel-heading">Clothes Checkout</div>
           <div class="panel-body">
             <div class="form-group">
               <div class="col-md-12">
@@ -35,9 +34,9 @@
             </div>
             <div class="form-group">
               <div class="col-md-2">
-                <strong>State:</strong>
+                <strong>Region:</strong>
                 <select v-model="order.state" class="form-control">
-                  <option disabled value="">State</option>
+                  <option disabled value="">Region</option>
                   <option v-for="(state, key) in states" v-bind:value="state">
                   {{key}}
                   </option>
@@ -88,7 +87,7 @@
                         Address: {{order.address}}
                         City: {{order.city}}
                         Zip: {{order.zip}}
-                        State: {{order.state}}
+                        Region: {{order.state}}
                         Method: {{order.method}}
                         Gift: {{order.gift}}
               </pre>
@@ -102,18 +101,18 @@
   </div>
 </template>
 <script>
-import MyHeader from './Header.vue';
+
 export default {
   name: 'Form',
   props: ['cartItemCount'],
   data () {
     return {
       states: {
-        AL: 'Alabama',
-        AK: 'Alaska',
-        AR: 'Arizona',
-        CA: 'California',
-        NV: 'Nevada'
+        KV: 'Kiev',
+        KH: 'Kharkiv',
+        LV: 'Lviv',
+        ZP: 'Zaporizhiya',
+        DN: 'Dnipro'
       },
       order: {
         firstName: '',
@@ -132,13 +131,16 @@ export default {
 
     }
   },
-  components: { MyHeader },
   methods: {
     submitForm() {
       alert('Submitted');
+      this.$store.dispatch('initCart');
     }
   }
 }
 </script>
 <style scoped>
+  #sendform {
+    margin-top: 90px;
+  }
 </style>

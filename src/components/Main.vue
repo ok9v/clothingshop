@@ -1,6 +1,5 @@
 <template>
   <div id="catalog" >
-  <my-header :cartItemCount="cartItemCount"></my-header>
   <main>
   <div v-for="product in sortedProducts">
     <div class="row">
@@ -48,23 +47,24 @@
   </div>
 </template>
 <script>
-import MyHeader from './Header.vue';
+
 import {mapGetters} from 'vuex';
 
 export default {
   name: 'imain',
   data () {
     return {
-      cart: []
+   //  cart: []
     }
   },
-  components: { MyHeader },
+
   methods: {
     checkRating(n, myProduct) {
       return myProduct.rating - n >= 0;
     },
     addToCart(aProduct) {
-      this.cart.push( aProduct.id );
+      //this.cart.push( aProduct.id );
+      this.$store.dispatch('setToCart', aProduct.id);
     },
     canAddToCart(aProduct) {
       //return this.product.availableInventory > this.cartItemCount;
@@ -82,7 +82,8 @@ export default {
   },
   computed: {
     ...mapGetters([
-        'products'
+        'products',
+      'cart'
     ]),
     cartItemCount() {
       return this.cart.length || '';
